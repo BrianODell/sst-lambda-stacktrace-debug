@@ -13,8 +13,10 @@ export default {
       environment: {
         NODE_OPTIONS: "--enable-source-maps",
       },
-      bundle: {
-        sourcemap: true,
+      nodejs: {
+        esbuild: {
+          sourcemap: "inline",
+        },
       },
     });
     app.stack(ExampleStack);
